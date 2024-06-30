@@ -1,0 +1,19 @@
+package TelaGrafica;
+
+import java.awt.GridBagLayout;
+
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+
+public class Tela  extends JDialog{
+	private JPanel painel = new JPanel(new GridBagLayout());
+	
+	public Tela() {
+		;
+		
+		
+		
+		setVisible(true);
+	}
+
+}

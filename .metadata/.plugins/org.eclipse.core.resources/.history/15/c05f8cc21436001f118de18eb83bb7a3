@@ -1,0 +1,77 @@
+package AulaJanelaGrafica;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class TelaTimeThread  extends JDialog{
+	
+	
+	private JPanel jPanel = new JPanel(new GridBagLayout());/* Painel de componentes*/
+	
+	private JLabel descicaoHora = new JLabel("Time Thread 1"); /*Componente*/
+	private JTextField mostraTempo =  new JTextField();
+	
+	private JLabel descicaoHora2 = new JLabel("Time Thread 2 ");
+	private JTextField mostraTempo2 = new JTextField();
+	
+	private JButton jButton1 = new JButton("Start");
+	private JButton jButton2 = new JButton("Stop");
+	
+	/*private JLabel vi = new JLabel("Vi gostosa");*/
+	
+	public TelaTimeThread() {
+		
+		setTitle("Minha tela de time com thread ");
+		setSize(new Dimension(240,240));
+		setLocationRelativeTo(null);
+		setResizable(false);
+		/*Primeira parte concluida*/
+		
+		GridBagConstraints bagConstraints = new GridBagConstraints();
+		bagConstraints.gridx = 0;
+		bagConstraints.gridy = 0;
+		
+		
+		descicaoHora.setPreferredSize(new Dimension(200,25)); 
+		jPanel.add(descicaoHora,bagConstraints);
+		
+		
+		mostraTempo.setPreferredSize(new Dimension(200,25));
+		bagConstraints.gridy ++; 
+		jPanel.add(mostraTempo,bagConstraints);
+		
+		descicaoHora2.setPreferredSize(new Dimension(200,25));
+		bagConstraints.gridy++;
+		jPanel.add(descicaoHora2,bagConstraints);
+		
+		mostraTempo2.setPreferredSize(new Dimension(200,25));
+		bagConstraints.gridy++;
+		jPanel.add(mostraTempo2,bagConstraints);
+		
+		/*vi.setPreferredSize(new Dimension(100,25));
+		bagConstraints.gridx++;
+		jPanel.add(vi,bagConstraints);*/
+		
+		jButton1.setPreferredSize(new Dimension(95,25));
+		bagConstraints.gridy++;
+		jPanel.add(jButton1,bagConstraints);
+		
+		jButton2.setPreferredSize(new Dimension(92,25));
+		
+		
+		
+		add(jPanel,BorderLayout.WEST);
+		
+		setVisible(true);/* Ultimo a ser executado*/
+	}
+
+}

@@ -1,0 +1,31 @@
+package TelaGrafica;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Tela  extends JDialog{
+	private JPanel painel = new JPanel(new GridBagLayout());
+	private JLabel text1 = new JLabel("Vitoria");
+	
+	public Tela() {
+		
+		setTitle("Sobre Vitoria");
+		setSize(new Dimension(240,240));
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+		GridBagConstraints gridBag = new GridBagConstraints();
+		gridBag.gridx = 0;
+		gridBag.gridy = 0;
+		
+		add(painel,BorderLayout.WEST);
+		setVisible(true);
+	}
+
+}

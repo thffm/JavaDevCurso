@@ -13,36 +13,45 @@ public class implementacaoFilaThread  extends Thread{
 	
 	@Override
 	public void run() {
-		Iterator iteracao = pilha_fila.iterator();
-		
-		synchronized (iteracao) { /*Bloqueio */
-			
-			while(iteracao.hasNext()) {
+		System.out.println("Ta rodando");
+		while(true) {
+			Iterator iteracao = pilha_fila.iterator();
+			synchronized (iteracao) { /*Bloqueio */
 				
-				ObjetoFilaThread procesar = (ObjetoFilaThread) iteracao.next();
-				
-				System.out.println("--------------------------------");
-				System.out.println(procesar.getEmail() + "-_----_- "+procesar.getNome());
-				
-				iteracao.remove();
-				try {
-					Thread.sleep(100);
-				}catch(InterruptedException e) {
-					e.printStackTrace();
-				}
-				
-				try {
-					Thread.sleep(1000);
-				}catch(InterruptedException e) {
-					e.printStackTrace();
+				while(iteracao.hasNext()) {
+					
+					ObjetoFilaThread procesar = (ObjetoFilaThread) iteracao.next();
+					
+					System.out.println("--------------------------------");
+					System.out.println(procesar.getEmail() + "-_----_- "+procesar.getNome());
+					
+					iteracao.remove();
+					try {
+						Thread.sleep(100);
+					}catch(InterruptedException e) {
+						e.printStackTrace();
+					}
+					
+					try {
+						Thread.sleep(1000);
+					}catch(InterruptedException e) {
+						e.printStackTrace();
+					}
+					
 				}
 				
 			}
-			
 		}
+		
+		
+		
+		
+		
 		
 		
 	
 	}
+	
+	
 
 }

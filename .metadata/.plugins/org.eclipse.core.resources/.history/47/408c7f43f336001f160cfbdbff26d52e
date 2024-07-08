@@ -1,9 +1,0 @@
-package AulaJanelaGrafica;
-
-import java.util.concurrent.ConcurrentLinkedQueue;
-
-public class implementacaoFilaThread  extends Thread{
-	
-	private static ConcurrentLinkedQueue<ObjetoFilaThread> pilha_fila = new ConcurrentLinkedQueue<ObjetoFilaThread>();
-
-}

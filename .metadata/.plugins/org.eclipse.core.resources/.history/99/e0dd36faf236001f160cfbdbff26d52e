@@ -1,6 +1,0 @@
-package AulaJanelaGrafica;
-
-public class implementacaoFilaThread  extends Thread{
-	
-
-}
